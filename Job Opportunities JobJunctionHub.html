@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote Jobs Portal</title>
+</head>
+<body>
+<!-- Remote IT and Computer Job Positions -->
+<section id="job-listings">
+  <h2>Explore Remote Job Opportunities</h2>
+  <p>Find Remote jobs in the IT and Computer field. Browse through our listings and apply today!</p>
+
+  <!-- Job 1: Computer Operator -->
+  <article class="job-listing">
+    <div class="job-header">
+      <h3>Computer Operator</h3>
+      <span class="job-type">Full-time</span>
+      <span class="job-location">New York, USA (Remote)</span>
+    </div>
+    <p class="job-description">system monitoring, routine maintenance, scheduled tasks, technical support, file management, and virus scanning.</p>
+    <ul class="job-requirements">
+      <li><strong>Skills:</strong> system monitoring, routine maintenance, scheduled tasks, technical support, file management, and virus scanning</li>
+      <li><strong>Expertise:</strong> Strong problem-solving skills, excellent communication and teamwork abilities</li>
+      <li><strong>Qualification:</strong> Any high school diploma, 2+ years of experience</li>
+      <li><strong>Salary:</strong> $25/HR</li>
+    </ul>
+    <button class="apply-btn" onclick="showDetails('Computer Operator')">Apply Now</button>
+  </article>
+
+  <!-- Job 2: Data Entry Specialist -->
+  <article class="job-listing">
+    <div class="job-header">
+      <h3>Data Entry Specialist</h3>
+      <span class="job-type">Part-time</span>
+      <span class="job-location">London, UK</span>
+    </div>
+    <p class="job-description">Accurately input and update data into databases or spreadsheets, Ensure data integrity and completeness, Organize and maintain data records, Follow data entry procedures and guidelines, Meet deadlines and targets for data entry tasks.</p>
+    <ul class="job-requirements">
+      <li><strong>Skills:</strong> Minimum 25 WPM Typing Speed with Accuracy, Attention to Detail, Organizational Skills, Time Management, Computer Proficiency, Data Analysis, Problem-Solving Skills</li>
+      <li><strong>Expertise:</strong> Strong analytical and problem-solving skills, excellent communication abilities</li>
+      <li><strong>Qualification:</strong> Any high school diploma, Experience in the relevant field will be a plus</li>
+      <li><strong>Salary:</strong> £23.5/HR</li>
+    </ul>
+    <button class="apply-btn" onclick="showDetails('Data Entry Specialist')">Apply Now</button>
+  </article>
+
+  <!-- Job 3: Cybersecurity Administrator -->
+  <article class="job-listing">
+    <div class="job-header">
+      <h3>Cybersecurity Administrator</h3>
+      <span class="job-type">Full-time</span>
+      <span class="job-location">San Francisco, USA</span>
+    </div>
+    <p class="job-description">Monitor and respond to security threats, develop and implement security protocols, and conduct vulnerability assessments.</p>
+    <ul class="job-requirements">
+      <li><strong>Skills:</strong> Proficiency in security frameworks and protocols (e.g., NIST, ISO 27001); experience with threat analysis and incident response</li>
+      <li><strong>Expertise:</strong> Strong analytical and problem-solving skills, excellent communication and collaboration abilities</li>
+      <li><strong>Qualification:</strong> Bachelor's degree in Cybersecurity or related field; 2+ years of experience</li>
+      <li><strong>Salary:</strong> $137,568/Annual</li>
+    </ul>
+    <button class="apply-btn" onclick="showDetails('Cybersecurity Administrator')">Apply Now</button>
+  </article>
+
+  <!-- Job 4: IT Project Manager -->
+  <article class="job-listing">
+    <div class="job-header">
+      <h3>IT Project Manager</h3>
+      <span class="job-type">Full-time</span>
+      <span class="job-location">Toronto, Canada</span>
+    </div>
+    <p class="job-description">Plan, coordinate, and deliver IT projects on time, within budget, and to the required quality standards.</p>
+    <ul class="job-requirements">
+      <li><strong>Skills:</strong> Proficiency in project management tools (e.g., Asana, Trello); experience with Agile methodologies and IT service management</li>
+      <li><strong>Expertise:</strong> Strong leadership and communication skills, excellent problem-solving and analytical abilities</li>
+      <li><strong>Qualification:</strong> Bachelor's degree in Computer Science or related field; 3+ years of experience</li>
+      <li><strong>Salary:</strong> $97,750/Annual</li>
+    </ul>
+    <button class="apply-btn" onclick="showDetails('IT Project Manager')">Apply Now</button>
+  </article>
+
+  <!-- Job 5: Web Developer -->
+  <article class="job-listing">
+    <div class="job-header">
+      <h3>Web Developer</h3>
+      <span class="job-type">Internship</span>
+      <span class="job-location">Berlin, Germany</span>
+    </div>
+    <p class="job-description">Design, develop, and maintain responsive and interactive web applications using HTML, CSS, and JavaScript.</p>
+    <ul class="job-requirements">
+      <li><strong>Skills:</strong> Proficiency in HTML, CSS, and JavaScript; experience with front-end frameworks (e.g., React, Angular)</li>
+      <li><strong>Expertise:</strong> Strong problem-solving skills, excellent communication and teamwork abilities</li>
+      <li><strong>Qualification:</strong> Bachelor's degree in Computer Science or related field; 1+ year of experience</li>
+      <li><strong>Salary:</strong> €51,481/Annual</li>
+    </ul>
+    <button class="apply-btn" onclick="showDetails('Web Developer')">Apply Now</button>
+  </article>
+</section>
+
+<!-- Detail Box -->
+<div id="detail-box" style="display: none; padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999;">
+  <h2>Detail Box</h2>
+  <form>
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required><br><br>
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
+    <button type="button" onclick="submitApplication()">Submit Application</button>
+  </form>
+</div>
+
+<!-- Submission Confirmation Popup -->
+<div id="confirmation-popup" style="display: none; padding: 20px; background-color: green; color: white; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999; text-align: center;">
+  <h2>Application Submitted</h2>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  #job-listings {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .job-listing {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .job-listing:last-child {
+    border-bottom: none;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .job-type {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .job-location {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .job-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .job-requirements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .job-requirements li {
+    margin-bottom: 10px;
+  }
+
+  .job-requirements li strong {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .apply-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .apply-btn:hover {
+    background-color: #3e8e41;
+  }
+</style>
+
+<script>
+function showDetails(jobTitle) {
+  // Display the detail box
+  document.getElementById("detail-box").style.display = "block";
+  // Set the title of the detail box
+  document.getElementById("detail-box").getElementsByTagName("h2")[0].innerText = "Detail Box - " + jobTitle;
+}
+
+function submitApplication() {
+  // Check if any field is empty
+  var firstName = document.getElementById("first-name").value;
+  var lastName = document.getElementById("last-name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+
+  if (firstName === '' || lastName === '' || email === '' || phone === '') {
+    // Show error message
+    alert("Please fill all the details.");
+    return;
+  }
+
+  // Hide the detail box
+  document.getElementById("detail-box").style.display = "none";
+  // Display the confirmation popup
+  document.getElementById("confirmation-popup").style.display = "block";
+
+  // Hide confirmation popup after 3 seconds
+  setTimeout(function(){
+    document.getElementById("confirmation-popup").style.display = "none";
+  }, 3000);
+}
+
+// Close detail box if clicked outside
+window.onclick = function(event) {
+  var detailBox = document.getElementById('detail-box');
+  if (event.target == detailBox) {
+    detailBox.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
